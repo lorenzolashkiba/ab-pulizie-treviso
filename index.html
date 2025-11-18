@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AB Pulizie Treviso - Servizi professionali di pulizia per condomini, aziende e uffici. Preventivi rapidi e gratuiti in 24h. Squadra esperta nella zona di Treviso.">
+    <meta name="keywords" content="pulizie Treviso, pulizie condomini Treviso, pulizie aziende Treviso, pulizie uffici Treviso, servizi pulizie professionali, preventivo pulizie veloce">
+    <meta name="author" content="AB Pulizie">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AB Pulizie Treviso - Servizi Professionali di Pulizia">
+    <meta property="og:description" content="Preventivi gratuiti in 24h. Pulizie professionali per condomini, aziende e uffici a Treviso e zone limitrofe.">
+    <meta property="og:image" content="logo-social.svg">
+    <meta property="og:url" content="https://www.abpulizietreviso.com">
+    <meta property="og:site_name" content="AB Pulizie Treviso">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AB Pulizie Treviso - Servizi Professionali di Pulizia">
+    <meta name="twitter:description" content="Preventivi gratuiti in 24h. Pulizie professionali per condomini, aziende e uffici a Treviso.">
+    <meta name="twitter:image" content="logo-social.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0066cc">
+
+    <title>AB Pulizie Treviso | Servizi Professionali Pulizie Condomini, Aziende, Uffici</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" fill="#0066cc" stroke="#003d7a" stroke-width="2"/>
+                        <text x="30" y="42" font-family="Montserrat, sans-serif" font-size="32" font-weight="800" fill="white" text-anchor="middle">AB</text>
+                        <circle cx="45" cy="15" r="8" fill="#00cc66" opacity="0.8"/>
+                    </svg>
+                    <div class="logo-text">
+                        <span class="brand-name">AB Pulizie</span>
+                        <span class="brand-location">Treviso</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#perche-noi">Perché Noi</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#preventivo" class="btn-nav">Preventivo Veloce</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero">
+        <div class="hero-carousel">
+            <div class="carousel-slide active">
+                <img src="img/hero-1.jpg" alt="Pulizie Professionali Treviso">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/hero-2.jpg" alt="Squadra Esperta">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/hero-3.jpg" alt="Preventivo in 24h">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/hero-4.jpg" alt="Zona Treviso">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Pulizie Professionali a <span class="highlight">Treviso</span></h1>
+                <p class="hero-subtitle">Condomini • Aziende • Uffici</p>
+                <p class="hero-description">Preventivo gratuito in 24 ore. Squadra esperta e affidabile.</p>
+                <div class="hero-cta">
+                    <a href="#preventivo" class="btn btn-primary">Richiedi Preventivo</a>
+                    <a href="tel:+393331234567" class="btn btn-secondary">Chiamaci Ora</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>Risposta in 24h</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>Preventivo Gratuito</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>Squadra Esperta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section id="chi-siamo" class="chi-siamo">
+        <!-- Mappa come background -->
+        <div id="map-background"></div>
+        <div class="map-overlay"></div>
+        <div class="map-fade-edges"></div>
+
+        <div class="container chi-siamo-container">
+            <div class="chi-siamo-content">
+                <div class="chi-siamo-text">
+                    <h2 class="section-title">Chi Siamo</h2>
+                    <p class="intro-text">AB Pulizie è la tua azienda di fiducia per servizi di pulizia professionale <strong>a Treviso e provincia</strong>.</p>
+                    <p>Siamo un team locale, radicato nel territorio trevisano, che conosce perfettamente le esigenze della zona. La nostra missione è offrire servizi di pulizia di altissima qualità con un approccio personalizzato e attento ad ogni dettaglio.</p>
+
+                    <div class="chi-siamo-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📍</div>
+                            <div class="highlight-content">
+                                <h3>Presenza Locale</h3>
+                                <p>Operiamo esclusivamente a Treviso e zone limitrofe, garantendo interventi rapidi e puntuali in tutta la provincia.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-content">
+                                <h3>Specializzazione</h3>
+                                <p>Ci concentriamo su <strong>condomini, case private, uffici e pulizie straordinarie</strong>, offrendo soluzioni mirate per ogni ambiente.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">👥</div>
+                            <div class="highlight-content">
+                                <h3>Lavoro di Squadra</h3>
+                                <p>Lavoriamo sempre in team per garantire efficienza, velocità e risultati impeccabili in ogni intervento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="zone-tags">
+                        <span class="zone-tag">Treviso Centro</span>
+                        <span class="zone-tag">Villorba</span>
+                        <span class="zone-tag">Silea</span>
+                        <span class="zone-tag">Carbonera</span>
+                        <span class="zone-tag">Preganziol</span>
+                        <span class="zone-tag">Casier</span>
+                        <span class="zone-tag">Paese</span>
+                        <span class="zone-tag">Quinto</span>
+                        <span class="zone-tag">Monastier</span>
+                        <span class="zone-tag">Roncade</span>
+                        <span class="zone-tag">Mogliano Veneto</span>
+                        <span class="zone-tag">Castelfranco Veneto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi Section -->
+    <section id="servizi" class="servizi">
+        <div class="container">
+            <h2 class="section-title">I Nostri Servizi</h2>
+            <p class="section-subtitle">Pulizie professionali per ogni ambiente</p>
+
+            <div class="servizi-list">
+                <div class="servizio-item">
+                    <div class="servizio-icon">🏢</div>
+                    <div class="servizio-content">
+                        <h3>Condomini</h3>
+                        <p>Scale, atri, garage e aree comuni</p>
+                    </div>
+                </div>
+
+                <div class="servizio-item">
+                    <div class="servizio-icon">🏭</div>
+                    <div class="servizio-content">
+                        <h3>Aziende</h3>
+                        <p>Pulizie industriali, negozi e magazzini</p>
+                    </div>
+                </div>
+
+                <div class="servizio-item">
+                    <div class="servizio-icon">💼</div>
+                    <div class="servizio-content">
+                        <h3>Uffici</h3>
+                        <p>Postazioni lavoro e sale riunioni</p>
+                    </div>
+                </div>
+
+                <div class="servizio-item">
+                    <div class="servizio-icon">✨</div>
+                    <div class="servizio-content">
+                        <h3>Straordinarie</h3>
+                        <p>Post-ristrutturazione e sanificazione</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perché Noi Section -->
+    <section id="perche-noi" class="perche-noi">
+        <div class="container">
+            <div class="perche-noi-header">
+                <h2 class="section-title">Perché Scegliere AB Pulizie</h2>
+                <p class="section-subtitle">Qualità, affidabilità e velocità al tuo servizio</p>
+            </div>
+
+            <div class="vantaggi-container">
+                <div class="vantaggio-card">
+                    <div class="vantaggio-icon">
+                        <svg width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="35" cy="35" r="32" fill="#0066cc" opacity="0.1"/>
+                            <path d="M35 12 L35 35 L50 35" stroke="#0066cc" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <circle cx="35" cy="35" r="24" stroke="#0066cc" stroke-width="3" fill="none"/>
+                            <circle cx="35" cy="35" r="3" fill="#0066cc"/>
+                        </svg>
+                    </div>
+                    <h3>Preventivo Rapido</h3>
+                    <p>Ti contattiamo entro 24 ore con un preventivo dettagliato, trasparente e personalizzato. Servizio veloce, senza costi nascosti e completamente gratuito.</p>
+                    <div class="vantaggio-highlight">Risposta garantita in 24h</div>
+                </div>
+
+                <div class="vantaggio-card">
+                    <div class="vantaggio-icon">
+                        <svg width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="35" cy="35" r="32" fill="#00cc66" opacity="0.1"/>
+                            <circle cx="25" cy="28" r="9" fill="#00cc66" opacity="0.3"/>
+                            <circle cx="45" cy="28" r="9" fill="#00cc66" opacity="0.3"/>
+                            <circle cx="35" cy="45" r="9" fill="#00cc66" opacity="0.3"/>
+                            <path d="M25 28 L45 28 L35 45 Z" fill="none" stroke="#00cc66" stroke-width="3"/>
+                            <circle cx="25" cy="28" r="3" fill="#00cc66"/>
+                            <circle cx="45" cy="28" r="3" fill="#00cc66"/>
+                            <circle cx="35" cy="45" r="3" fill="#00cc66"/>
+                        </svg>
+                    </div>
+                    <h3>Team Professionale</h3>
+                    <p>Squadra certificata con anni di esperienza. Utilizziamo prodotti professionali eco-friendly e attrezzature moderne per garantire risultati impeccabili.</p>
+                    <div class="vantaggio-highlight">Personale formato e certificato</div>
+                </div>
+
+                <div class="vantaggio-card">
+                    <div class="vantaggio-icon">
+                        <svg width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="35" cy="35" r="32" fill="#0066cc" opacity="0.1"/>
+                            <rect x="18" y="23" width="34" height="28" rx="2" fill="none" stroke="#0066cc" stroke-width="3"/>
+                            <line x1="18" y1="32" x2="52" y2="32" stroke="#0066cc" stroke-width="3"/>
+                            <circle cx="35" cy="17" r="4" fill="#0066cc"/>
+                            <path d="M35 17 L35 23" stroke="#0066cc" stroke-width="3"/>
+                            <circle cx="35" cy="40" r="2" fill="#0066cc"/>
+                            <path d="M35 40 L35 35" stroke="#0066cc" stroke-width="2"/>
+                            <path d="M35 40 L32 44" stroke="#0066cc" stroke-width="2"/>
+                            <path d="M35 40 L38 44" stroke="#0066cc" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Flessibilità Totale</h3>
+                    <p>Servizio su tutta Treviso e provincia. Orari flessibili: diurni, serali o weekend. Ci adattiamo completamente alle tue esigenze senza interferire con la tua routine.</p>
+                    <div class="vantaggio-highlight">Tu scegli quando e dove</div>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Clienti Soddisfatti</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Anni di Esperienza</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Comuni Serviti</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Garanzia Qualità</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Contatti Section -->
+    <section id="contatti" class="contatti">
+        <div class="container">
+            <h2 class="section-title">Dove Operiamo</h2>
+            <div class="zone-grid">
+                <div class="zona">Treviso Centro</div>
+                <div class="zona">Villorba</div>
+                <div class="zona">Silea</div>
+                <div class="zona">Carbonera</div>
+                <div class="zona">Preganziol</div>
+                <div class="zona">Casier</div>
+                <div class="zona">Paese</div>
+                <div class="zona">Quinto di Treviso</div>
+                <div class="zona">Monastier</div>
+                <div class="zona">Roncade</div>
+                <div class="zona">Mogliano Veneto</div>
+                <div class="zona">Castelfranco Veneto</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Domande sui servizi di pulizia?</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Cos'è AB Pulizie?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AB Pulizie è un'azienda specializzata in servizi di pulizia professionali per condomini, aziende e uffici nella zona di Treviso e provincia. Offriamo pulizie ordinarie e straordinarie con personale qualificato e attrezzature all'avanguardia.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Come funziona la garanzia di soddisfazione al 100%?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Se non sei soddisfatto del servizio, hai 48 ore per segnalarcelo. Interverremo nuovamente senza costi aggiuntivi per assicurarci che tutto sia perfetto. La tua soddisfazione è la nostra priorità.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>In quali giorni lavorate?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Siamo disponibili dal lunedì al sabato, dalle 8:00 alle 18:00. Per esigenze particolari o interventi urgenti, contattaci per valutare soluzioni personalizzate anche fuori orario.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quali zone coprite a Treviso?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Operiamo in tutto il comune di Treviso e nelle zone limitrofe, tra cui Villorba, Silea, Carbonera, Preganziol, Casier, Paese, Quinto di Treviso, Monastier, Roncade, Mogliano Veneto, Castelfranco Veneto e altre località della provincia.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Come vengono calcolati i preventivi?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I preventivi sono personalizzati in base a metratura, tipologia di servizio richiesto e frequenza degli interventi. Compila il nostro form o contattaci direttamente: riceverai un preventivo dettagliato e gratuito entro 24 ore.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Utilizzate prodotti ecologici?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sì, utilizziamo prodotti professionali eco-compatibili che rispettano l'ambiente e sono sicuri per persone e animali domestici. Su richiesta, possiamo utilizzare esclusivamente prodotti certificati biologici.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- Preventivo Section -->
+    <section id="preventivo" class="preventivo">
+        <div class="container">
+            <div class="preventivo-wrapper">
+                <div class="preventivo-info">
+                    <h2>Preventivo Gratuito in 24 Ore</h2>
+                    <p>Compila il form e ti ricontatteremo entro 24 ore con un preventivo dettagliato e gratuito.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <strong>Telefono</strong>
+                                <p><a href="tel:+393331234567">+39 333 123 4567</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:info@abpulizietreviso.it">info@abpulizietreviso.it</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Zona Operativa</strong>
+                                <p>Treviso e Provincia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preventivo-form">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="ed881a3f-febe-416d-9bb6-956ef05163c1">
+                        <input type="hidden" name="subject" value="Nuova richiesta preventivo - AB Pulizie Treviso">
+                        <input type="hidden" name="from_name" value="AB Pulizie Website">
+
+                        <div class="form-group">
+                            <label for="nome">Nome e Cognome *</label>
+                            <input type="text" id="nome" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Telefono *</label>
+                            <input type="tel" id="telefono" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servizio">Tipo di Servizio *</label>
+                            <select id="servizio" name="service" required>
+                                <option value="">Seleziona...</option>
+                                <option value="Pulizie Condominio">Pulizie Condominio</option>
+                                <option value="Pulizie Azienda">Pulizie Azienda</option>
+                                <option value="Pulizie Ufficio">Pulizie Ufficio</option>
+                                <option value="Pulizie Straordinarie">Pulizie Straordinarie</option>
+                                <option value="Altro">Altro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="messaggio">Messaggio</label>
+                            <textarea id="messaggio" name="message" rows="4" placeholder="Descrivi brevemente le tue esigenze..."></textarea>
+                        </div>
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Richiedi Preventivo</button>
+                        <div id="formStatus"></div>
+                        <p class="form-note">Risponderemo entro 24 ore lavorative</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-footer">
+                        <svg width="50" height="50" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" fill="#0066cc" stroke="#003d7a" stroke-width="2"/>
+                            <text x="30" y="42" font-family="Montserrat, sans-serif" font-size="32" font-weight="800" fill="white" text-anchor="middle">AB</text>
+                            <circle cx="45" cy="15" r="8" fill="#00cc66" opacity="0.8"/>
+                        </svg>
+                        <h3>AB Pulizie Treviso</h3>
+                    </div>
+                    <p>Servizi professionali di pulizia per condomini, aziende e uffici nella zona di Treviso.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li>Pulizie Condomini</li>
+                        <li>Pulizie Aziende</li>
+                        <li>Pulizie Uffici</li>
+                        <li>Pulizie Straordinarie</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <ul>
+                        <li>📞 <a href="tel:+393331234567">+39 333 123 4567</a></li>
+                        <li>✉️ <a href="mailto:info@abpulizietreviso.it">info@abpulizietreviso.it</a></li>
+                        <li>📍 Treviso e Provincia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AB Pulizie Treviso. Tutti i diritti riservati. | P.IVA: 12345678901</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
