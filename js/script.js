@@ -371,3 +371,41 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('AB Pulizie Treviso website loaded successfully!');
 });
+
+// Stats Horizontal Scroll Animation
+const statsContainer = document.querySelector('.stats-container');
+const statsTrack = document.querySelector('.stats-track');
+
+if (statsContainer && statsTrack) {
+    let ticking = false;
+
+    function updateStatsScroll() {
+        const containerRect = statsContainer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if stats container is in viewport
+        if (containerRect.top < windowHeight && containerRect.bottom > 0) {
+            // Calculate scroll progress through the stats section
+            const scrollProgress = (windowHeight - containerRect.top) / (windowHeight + containerRect.height);
+
+            // Scroll horizontally based on scroll progress
+            const horizontalScroll = -scrollProgress * 600;
+
+            statsTrack.style.transform = `translateX(${horizontalScroll}px)`;
+        }
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateStatsScroll);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick);
+
+    // Initial call
+    updateStatsScroll();
+}
