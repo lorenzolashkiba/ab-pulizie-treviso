@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
   <url>
-    <loc>https://www.abpulizietreviso.com/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://pulizietreviso.netlify.app/</loc>
+    <lastmod>2024-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://pulizietreviso.netlify.app/logo-social.svg</image:loc>
+      <image:title>AB Pulizie Treviso Logo</image:title>
+    </image:image>
   </url>
+
+  <!-- Servizi Section -->
   <url>
-    <loc>https://www.abpulizietreviso.com/privacy.html</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://pulizietreviso.netlify.app/#servizi</loc>
+    <lastmod>2024-11-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.9</priority>
   </url>
+
+  <!-- Calcolatore Preventivo -->
+  <url>
+    <loc>https://pulizietreviso.netlify.app/#calcolatore</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Perché Noi -->
+  <url>
+    <loc>https://pulizietreviso.netlify.app/#perche-noi</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://pulizietreviso.netlify.app/#faq</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Preventivo -->
+  <url>
+    <loc>https://pulizietreviso.netlify.app/#preventivo</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contatti -->
+  <url>
+    <loc>https://pulizietreviso.netlify.app/#contatti</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
