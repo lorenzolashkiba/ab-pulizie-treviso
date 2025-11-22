@@ -2107,3 +2107,84 @@ footer {
     display: block;
     animation: fadeInUp 0.3s ease-out;
 }
+
+/* Google Reviews Badge */
+.google-reviews-badge {
+    max-width: 600px;
+    margin: 3rem auto 2rem;
+    padding: 0 20px;
+}
+
+.google-badge-link {
+    display: block;
+    text-decoration: none;
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.google-badge-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 102, 204, 0.2);
+}
+
+.google-badge-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.google-logo {
+    flex-shrink: 0;
+}
+
+.google-badge-text {
+    flex: 1;
+}
+
+.google-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.stars {
+    color: #FBBC05;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.rating-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.google-review-text {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.google-cta {
+    color: #4285F4;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* Responsive Google Badge */
+@media (max-width: 768px) {
+    .google-badge-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .google-cta {
+        white-space: normal;
+    }
+}
