@@ -210,12 +210,6 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Calcolatore Preventivo",
-          "item": "https://pulizietreviso.netlify.app#calcolatore"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "Preventivo Gratuito",
           "item": "https://pulizietreviso.netlify.app#preventivo"
         }
@@ -321,7 +315,6 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#calcolatore">Calcolatore</a></li>
                     <li><a href="#perche-noi">Perché Noi</a></li>
                     <li><a href="#contatti">Contatti</a></li>
                     <li><a href="#preventivo" class="btn-nav">Preventivo Veloce</a></li>
@@ -455,7 +448,7 @@
                     <div class="servizio-icon">🏢</div>
                     <div class="servizio-content">
                         <h3>Pulizie Condomini Treviso</h3>
-                        <p>Scale, atri, garage e aree comuni condominiali. <a href="#calcolatore" style="color: var(--primary-color);">Calcola subito il preventivo</a></p>
+                        <p>Scale, atri, garage e aree comuni condominiali. <a href="#preventivo" style="color: var(--primary-color);">Richiedi preventivo gratuito</a></p>
                     </div>
                 </div>
 
@@ -480,156 +473,6 @@
                     <div class="servizio-content">
                         <h3>Pulizie Straordinarie e Sanificazione</h3>
                         <p>Post-ristrutturazione e sanificazione completa. <a href="#contatti" style="color: var(--primary-color);">Contattaci subito</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calcolatore Preventivo Section -->
-    <section id="calcolatore" class="calcolatore-preventivo">
-        <div class="container">
-            <h2 class="section-title">Calcola il Tuo Preventivo</h2>
-            <p class="section-subtitle">Scopri subito una stima indicativa del costo del servizio</p>
-
-            <div class="calcolatore-wrapper">
-                <div class="calcolatore-form">
-                    <!-- Tipo di Servizio -->
-                    <div class="calc-group">
-                        <label class="calc-label">
-                            <span class="calc-icon">🏢</span>
-                            Tipo di Servizio
-                        </label>
-                        <div class="calc-options">
-                            <button type="button" class="calc-option active" data-service="condominio" data-price="8">
-                                <span class="option-title">Condominio</span>
-                                <span class="option-price">€8-12/mq</span>
-                            </button>
-                            <button type="button" class="calc-option" data-service="azienda" data-price="10">
-                                <span class="option-title">Azienda</span>
-                                <span class="option-price">€10-15/mq</span>
-                            </button>
-                            <button type="button" class="calc-option" data-service="ufficio" data-price="9">
-                                <span class="option-title">Ufficio</span>
-                                <span class="option-price">€9-13/mq</span>
-                            </button>
-                            <button type="button" class="calc-option" data-service="straordinaria" data-price="15">
-                                <span class="option-title">Straordinaria</span>
-                                <span class="option-price">€15-25/mq</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Metratura -->
-                    <div class="calc-group">
-                        <label class="calc-label">
-                            <span class="calc-icon">📏</span>
-                            Metratura (mq)
-                        </label>
-                        <div class="slider-container">
-                            <input type="range" id="metratura" min="50" max="1000" value="150" step="10">
-                            <div class="slider-value">
-                                <span id="metraturaValue">150</span> mq
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Frequenza -->
-                    <div class="calc-group">
-                        <label class="calc-label">
-                            <span class="calc-icon">📅</span>
-                            Frequenza
-                        </label>
-                        <div class="calc-options">
-                            <button type="button" class="calc-option freq-option" data-frequency="una-tantum" data-multiplier="1">
-                                <span class="option-title">Una Tantum</span>
-                            </button>
-                            <button type="button" class="calc-option freq-option active" data-frequency="settimanale" data-multiplier="0.7">
-                                <span class="option-title">Settimanale</span>
-                                <span class="option-badge">-30%</span>
-                            </button>
-                            <button type="button" class="calc-option freq-option" data-frequency="bisettimanale" data-multiplier="0.75">
-                                <span class="option-title">Bisettimanale</span>
-                                <span class="option-badge">-25%</span>
-                            </button>
-                            <button type="button" class="calc-option freq-option" data-frequency="mensile" data-multiplier="0.85">
-                                <span class="option-title">Mensile</span>
-                                <span class="option-badge">-15%</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Servizi Extra -->
-                    <div class="calc-group">
-                        <label class="calc-label">
-                            <span class="calc-icon">✨</span>
-                            Servizi Aggiuntivi (opzionali)
-                        </label>
-                        <div class="extra-services">
-                            <label class="checkbox-option">
-                                <input type="checkbox" class="extra-checkbox" data-extra="vetri" data-cost="50">
-                                <span class="checkbox-label">
-                                    <span class="checkbox-title">Pulizia Vetri</span>
-                                    <span class="checkbox-price">+€50</span>
-                                </span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" class="extra-checkbox" data-extra="sanificazione" data-cost="80">
-                                <span class="checkbox-label">
-                                    <span class="checkbox-title">Sanificazione</span>
-                                    <span class="checkbox-price">+€80</span>
-                                </span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" class="extra-checkbox" data-extra="ceratura" data-cost="60">
-                                <span class="checkbox-label">
-                                    <span class="checkbox-title">Ceratura Pavimenti</span>
-                                    <span class="checkbox-price">+€60</span>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Risultato -->
-                <div class="calcolatore-result">
-                    <div class="result-card">
-                        <h3>Preventivo Indicativo</h3>
-                        <div class="price-display">
-                            <span class="price-label">Da</span>
-                            <span class="price-amount" id="priceMin">€1,050</span>
-                            <span class="price-label">a</span>
-                            <span class="price-amount" id="priceMax">€1,800</span>
-                        </div>
-                        <div class="price-details">
-                            <div class="detail-row">
-                                <span>Servizio:</span>
-                                <span id="detailService">Condominio</span>
-                            </div>
-                            <div class="detail-row">
-                                <span>Metratura:</span>
-                                <span id="detailArea">150 mq</span>
-                            </div>
-                            <div class="detail-row">
-                                <span>Frequenza:</span>
-                                <span id="detailFreq">Settimanale</span>
-                            </div>
-                            <div class="detail-row" id="extrasRow" style="display: none;">
-                                <span>Servizi extra:</span>
-                                <span id="detailExtras">-</span>
-                            </div>
-                        </div>
-                        <div class="result-disclaimer">
-                            <p><strong>Nota:</strong> Questo è un preventivo indicativo e può variare in base a:</p>
-                            <ul>
-                                <li>Condizioni effettive dei locali</li>
-                                <li>Accessibilità della zona</li>
-                                <li>Servizi specifici richiesti</li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-primary btn-block" onclick="document.getElementById('preventivo').scrollIntoView({behavior: 'smooth'})">
-                            Richiedi Preventivo Dettagliato
-                        </button>
                     </div>
                 </div>
             </div>
@@ -724,12 +567,8 @@
             <div class="stats-container">
                 <div class="stats-track">
                     <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Clienti Soddisfatti</div>
-                    </div>
-                    <div class="stat-item">
                         <div class="stat-number">10+</div>
-                        <div class="stat-label">Anni di Esperienza</div>
+                        <div class="stat-label">Clienti Soddisfatti</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">12</div>
@@ -740,7 +579,7 @@
                         <div class="stat-label">Garanzia Qualità</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">2000+</div>
+                        <div class="stat-number">20+</div>
                         <div class="stat-label">Interventi Completati</div>
                     </div>
                     <div class="stat-item">
@@ -751,12 +590,9 @@
                         <div class="stat-number">95%</div>
                         <div class="stat-label">Clienti Fidelizzati</div>
                     </div>
+
                     <div class="stat-item">
-                        <div class="stat-number">15</div>
-                        <div class="stat-label">Operatori Qualificati</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">7/7</div>
+                        <div class="stat-number">6/7</div>
                         <div class="stat-label">Disponibilità Settimanale</div>
                     </div>
                     <div class="stat-item">
