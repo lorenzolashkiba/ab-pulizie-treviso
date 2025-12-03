@@ -378,7 +378,6 @@ const statsTrack = document.querySelector('.stats-track');
 
 if (statsContainer && statsTrack) {
     let ticking = false;
-    let lastScrollProgress = 0;
 
     function updateStatsScroll() {
         const containerRect = statsContainer.getBoundingClientRect();
@@ -387,18 +386,20 @@ if (statsContainer && statsTrack) {
         // Check if stats container is in viewport
         if (containerRect.top < windowHeight && containerRect.bottom > 0) {
             // Calculate scroll progress through the stats section
+            // When container.top = windowHeight (just entering), progress = 0
+            // When container.bottom = 0 (just leaving), progress = 1
+            const visibleHeight = Math.min(containerRect.bottom, windowHeight) - Math.max(containerRect.top, 0);
+            const totalScrollableHeight = windowHeight + containerRect.height;
             const scrollProgress = Math.max(0, Math.min(1,
-                (windowHeight - containerRect.top) / (windowHeight + containerRect.height)
+                (windowHeight - containerRect.top) / totalScrollableHeight
             ));
 
-            // Only update if there's a significant change
-            if (Math.abs(scrollProgress - lastScrollProgress) > 0.001) {
-                // Scroll horizontally based on scroll progress
-                const horizontalScroll = -scrollProgress * 600;
+            // Scroll horizontally based on scroll progress
+            // Increase the multiplier to show more movement
+            const trackWidth = statsTrack.scrollWidth - statsContainer.clientWidth;
+            const horizontalScroll = -scrollProgress * Math.max(trackWidth, 800);
 
-                statsTrack.style.transform = `translateX(${horizontalScroll}px)`;
-                lastScrollProgress = scrollProgress;
-            }
+            statsTrack.style.transform = `translateX(${horizontalScroll}px)`;
         }
 
         ticking = false;
