@@ -378,6 +378,7 @@ const statsTrack = document.querySelector('.stats-track');
 
 if (statsContainer && statsTrack) {
     let ticking = false;
+    let lastScrollProgress = 0;
 
     function updateStatsScroll() {
         const containerRect = statsContainer.getBoundingClientRect();
@@ -386,12 +387,18 @@ if (statsContainer && statsTrack) {
         // Check if stats container is in viewport
         if (containerRect.top < windowHeight && containerRect.bottom > 0) {
             // Calculate scroll progress through the stats section
-            const scrollProgress = (windowHeight - containerRect.top) / (windowHeight + containerRect.height);
+            const scrollProgress = Math.max(0, Math.min(1,
+                (windowHeight - containerRect.top) / (windowHeight + containerRect.height)
+            ));
 
-            // Scroll horizontally based on scroll progress
-            const horizontalScroll = -scrollProgress * 600;
+            // Only update if there's a significant change
+            if (Math.abs(scrollProgress - lastScrollProgress) > 0.001) {
+                // Scroll horizontally based on scroll progress
+                const horizontalScroll = -scrollProgress * 600;
 
-            statsTrack.style.transform = `translateX(${horizontalScroll}px)`;
+                statsTrack.style.transform = `translateX(${horizontalScroll}px)`;
+                lastScrollProgress = scrollProgress;
+            }
         }
 
         ticking = false;
@@ -399,12 +406,13 @@ if (statsContainer && statsTrack) {
 
     function requestTick() {
         if (!ticking) {
-            window.requestAnimationFrame(updateStatsScroll);
             ticking = true;
+            window.requestAnimationFrame(updateStatsScroll);
         }
     }
 
-    window.addEventListener('scroll', requestTick);
+    // Use passive listener to improve scroll performance
+    window.addEventListener('scroll', requestTick, { passive: true });
 
     // Initial call
     updateStatsScroll();
