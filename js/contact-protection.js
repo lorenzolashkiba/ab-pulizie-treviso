@@ -3,9 +3,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Obfuscated data (reversed strings)
-    const emailReversed = 'ti.lioamtoh@okiob';
+    const emailReversed = 'ti.liamtoh@okiob';
     const phoneReversed = '0165014723+93';
-    const phoneDisplayReversed = '0165014 723 93+';
+    const phoneDisplayReversed = '0165 014 723 93+';
 
     // Decode function
     function decode(str) {
