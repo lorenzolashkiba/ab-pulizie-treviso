@@ -1,7 +1,7 @@
 // Inizializza la mappa nella sezione Zone Coperte
 const map = L.map('map-container', {
     center: [45.6669, 12.2428], // Centro su Treviso
-    zoom: 11,
+    zoom: 13,
     zoomControl: true,
     scrollWheelZoom: true,
     doubleClickZoom: true,
@@ -50,24 +50,14 @@ function createZoneIconWithLabel(name) {
     });
 }
 
-// Località servite con coordinate approssimative
+// Località servite con coordinate approssimative (entro 5km dal centro di Treviso)
 const locations = [
     { name: 'Treviso Centro', lat: 45.6669, lng: 12.2428, isMain: true },
-    { name: 'Villorba', lat: 45.7247, lng: 12.2486, isMain: false },
-    { name: 'Silea', lat: 45.6583, lng: 12.3056, isMain: false },
-    { name: 'Carbonera', lat: 45.6964, lng: 12.3203, isMain: false },
-    { name: 'Preganziol', lat: 45.6069, lng: 12.2322, isMain: false },
-    { name: 'Casier', lat: 45.6378, lng: 12.3150, isMain: false },
-    { name: 'Paese', lat: 45.6739, lng: 12.1633, isMain: false },
-    { name: 'Quinto di Treviso', lat: 45.6531, lng: 12.1856, isMain: false },
-    { name: 'Roncade', lat: 45.6319, lng: 12.3847, isMain: false },
-    { name: 'Mogliano Veneto', lat: 45.5583, lng: 12.2367, isMain: false },
     { name: 'Fiera', lat: 45.6456, lng: 12.2167, isMain: false },
     { name: 'San Lazzaro', lat: 45.6547, lng: 12.2211, isMain: false },
-    { name: 'Ponzano', lat: 45.7097, lng: 12.2153, isMain: false },
-    { name: 'San Liberale', lat: 45.6825, lng: 12.2333, isMain: false },
-    { name: 'Lanzago', lat: 45.6594, lng: 12.2678, isMain: false },
+    { name: 'Quinto di Treviso', lat: 45.6531, lng: 12.1856, isMain: false },
     { name: 'Santa Bona', lat: 45.6458, lng: 12.2589, isMain: false },
+    { name: 'Monigo', lat: 45.6397, lng: 12.2175, isMain: false },
 ];
 
 // Aggiungi marker per ogni località
@@ -90,7 +80,7 @@ L.circle([45.6669, 12.2428], {
     color: '#0066cc',
     fillColor: '#0066cc',
     fillOpacity: 0.1,
-    radius: 15000, // 15km di raggio
+    radius: 5000, // 5km di raggio
     weight: 2,
     dashArray: '5, 5'
 }).addTo(map);
