@@ -60,13 +60,14 @@ const locations = [
     { name: 'Casier', lat: 45.6378, lng: 12.3150, isMain: false },
     { name: 'Paese', lat: 45.6739, lng: 12.1633, isMain: false },
     { name: 'Quinto di Treviso', lat: 45.6531, lng: 12.1856, isMain: false },
-    { name: 'Monastier', lat: 45.6431, lng: 12.4425, isMain: false },
     { name: 'Roncade', lat: 45.6319, lng: 12.3847, isMain: false },
     { name: 'Mogliano Veneto', lat: 45.5583, lng: 12.2367, isMain: false },
-    { name: 'Castelfranco Veneto', lat: 45.6708, lng: 11.9278, isMain: false },
     { name: 'Fiera', lat: 45.6456, lng: 12.2167, isMain: false },
     { name: 'San Lazzaro', lat: 45.6547, lng: 12.2211, isMain: false },
     { name: 'Ponzano', lat: 45.7097, lng: 12.2153, isMain: false },
+    { name: 'San Liberale', lat: 45.6825, lng: 12.2333, isMain: false },
+    { name: 'Lanzago', lat: 45.6594, lng: 12.2678, isMain: false },
+    { name: 'Santa Bona', lat: 45.6458, lng: 12.2589, isMain: false },
 ];
 
 // Aggiungi marker per ogni località

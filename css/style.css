@@ -534,9 +534,9 @@ header {
 }
 
 #map-container {
-    width: 50%;
-    max-width: 600px;
-    height: 400px;
+    width: 90%;
+    max-width: 1200px;
+    height: 500px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
