@@ -2278,3 +2278,18 @@ footer {
         white-space: normal;
     }
 }
+
+/* Anti-bot protection for contact links */
+.protected-email,
+.protected-phone {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: default;
+}
+
+.protected-email.loaded,
+.protected-phone.loaded {
+    pointer-events: auto;
+    opacity: 1;
+    cursor: pointer;
+}
