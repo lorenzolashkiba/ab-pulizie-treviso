@@ -380,13 +380,8 @@
 
     <!-- Chi Siamo Section -->
     <section id="chi-siamo" class="chi-siamo">
-        <!-- Mappa come background -->
-        <div id="map-background"></div>
-        <div class="map-overlay"></div>
-        <div class="map-fade-edges"></div>
-
-        <div class="container chi-siamo-container">
-            <div class="chi-siamo-content">
+        <div class="container">
+            <div class="chi-siamo-wrapper">
                 <div class="chi-siamo-text">
                     <h2 class="section-title">Chi Siamo</h2>
                     <p class="intro-text">AB Pulizie è la tua azienda di fiducia per servizi di pulizia professionale <strong>a Treviso e provincia</strong>.</p>
@@ -417,21 +412,93 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="zone-tags">
-                        <span class="zone-tag">Treviso Centro</span>
-                        <span class="zone-tag">Villorba</span>
-                        <span class="zone-tag">Silea</span>
-                        <span class="zone-tag">Carbonera</span>
-                        <span class="zone-tag">Preganziol</span>
-                        <span class="zone-tag">Casier</span>
-                        <span class="zone-tag">Paese</span>
-                        <span class="zone-tag">Quinto</span>
-                        <span class="zone-tag">Monastier</span>
-                        <span class="zone-tag">Roncade</span>
-                        <span class="zone-tag">Mogliano Veneto</span>
-                        <span class="zone-tag">Castelfranco Veneto</span>
-                    </div>
+                <!-- Cleaning Animation -->
+                <div class="cleaning-animation">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Floor -->
+                        <rect x="0" y="320" width="400" height="80" fill="#e9ecef"/>
+                        <line x1="0" y1="320" x2="400" y2="320" stroke="#dee2e6" stroke-width="2"/>
+
+                        <!-- Dirt particles (will be cleaned) -->
+                        <g class="dirt-particles">
+                            <circle cx="150" cy="310" r="3" fill="#6c757d" opacity="0.6"/>
+                            <circle cx="180" cy="315" r="2.5" fill="#6c757d" opacity="0.5"/>
+                            <circle cx="210" cy="312" r="2" fill="#6c757d" opacity="0.4"/>
+                            <circle cx="240" cy="314" r="3" fill="#6c757d" opacity="0.6"/>
+                            <circle cx="270" cy="311" r="2.5" fill="#6c757d" opacity="0.5"/>
+                        </g>
+
+                        <!-- Sparkles (appear after cleaning) -->
+                        <g class="sparkles">
+                            <path d="M 150 305 L 152 310 L 148 310 Z" fill="#ffd700" opacity="0"/>
+                            <path d="M 180 308 L 182 313 L 178 313 Z" fill="#ffd700" opacity="0"/>
+                            <path d="M 210 306 L 212 311 L 208 311 Z" fill="#ffd700" opacity="0"/>
+                            <path d="M 240 307 L 242 312 L 238 312 Z" fill="#ffd700" opacity="0"/>
+                            <path d="M 270 305 L 272 310 L 268 310 Z" fill="#ffd700" opacity="0"/>
+                        </g>
+
+                        <!-- Person cleaning -->
+                        <g class="cleaner-person">
+                            <!-- Body -->
+                            <ellipse cx="200" cy="260" rx="25" ry="35" fill="#0066cc"/>
+
+                            <!-- Head -->
+                            <circle cx="200" cy="210" r="20" fill="#ffdbac"/>
+
+                            <!-- Arms -->
+                            <g class="arm-left">
+                                <line x1="185" y1="240" x2="160" y2="270" stroke="#0066cc" stroke-width="8" stroke-linecap="round"/>
+                            </g>
+                            <g class="arm-right">
+                                <line x1="215" y1="240" x2="240" y2="280" stroke="#0066cc" stroke-width="8" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Legs -->
+                            <line x1="190" y1="290" x2="185" y2="320" stroke="#0066cc" stroke-width="8" stroke-linecap="round"/>
+                            <line x1="210" y1="290" x2="215" y2="320" stroke="#0066cc" stroke-width="8" stroke-linecap="round"/>
+
+                            <!-- Mop -->
+                            <g class="mop">
+                                <line x1="240" y1="280" x2="260" y2="315" stroke="#8b4513" stroke-width="4"/>
+                                <rect x="255" y="315" width="15" height="8" fill="#00cc66" rx="2"/>
+                            </g>
+                        </g>
+
+                        <!-- Bucket -->
+                        <g class="bucket">
+                            <rect x="320" y="290" width="50" height="35" rx="3" fill="#0066cc"/>
+                            <ellipse cx="345" cy="290" rx="25" ry="5" fill="#003d7a"/>
+                            <path d="M 330 285 Q 345 280 360 285" stroke="#003d7a" stroke-width="3" fill="none"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zone Coperte Section -->
+    <section id="zone-coperte" class="zone-coperte">
+        <div class="container">
+            <h2 class="section-title">Zone Coperte</h2>
+            <p class="section-subtitle">Serviamo Treviso e tutta la provincia</p>
+
+            <div class="zone-map-wrapper">
+                <div id="map-container"></div>
+                <div class="zone-tags">
+                    <span class="zone-tag">Treviso Centro</span>
+                    <span class="zone-tag">Villorba</span>
+                    <span class="zone-tag">Silea</span>
+                    <span class="zone-tag">Carbonera</span>
+                    <span class="zone-tag">Preganziol</span>
+                    <span class="zone-tag">Casier</span>
+                    <span class="zone-tag">Paese</span>
+                    <span class="zone-tag">Quinto</span>
+                    <span class="zone-tag">Monastier</span>
+                    <span class="zone-tag">Roncade</span>
+                    <span class="zone-tag">Mogliano Veneto</span>
+                    <span class="zone-tag">Castelfranco Veneto</span>
                 </div>
             </div>
         </div>

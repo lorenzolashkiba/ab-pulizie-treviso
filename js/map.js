@@ -1,12 +1,12 @@
-// Inizializza la mappa come background (spostata verso destra)
-const map = L.map('map-background', {
-    center: [45.65, 12.2], // Spostato verso sinistra per far apparire Treviso a destra
-    zoom: 12, // Aumentato zoom del 40% circa (da 10 a 11)
-    zoomControl: false,
-    scrollWheelZoom: false,
-    doubleClickZoom: false,
-    dragging: false,
-    attributionControl: false
+// Inizializza la mappa nella sezione Zone Coperte
+const map = L.map('map-container', {
+    center: [45.6669, 12.2428], // Centro su Treviso
+    zoom: 11,
+    zoomControl: true,
+    scrollWheelZoom: true,
+    doubleClickZoom: true,
+    dragging: true,
+    attributionControl: true
 });
 
 // Aggiungi tile layer (mappa base)
@@ -94,12 +94,10 @@ L.circle([45.6669, 12.2428], {
     dashArray: '5, 5'
 }).addTo(map);
 
-// Stile ridotto per la mappa in background (opacità ridotta)
-const mapElement = document.getElementById('map-background');
-if (mapElement) {
-    mapElement.style.opacity = '0.6';
-    mapElement.style.filter = 'grayscale(20%)';
-}
+// Aspetta che la mappa sia caricata prima di invalidare le dimensioni
+setTimeout(() => {
+    map.invalidateSize();
+}, 100);
 
 // Aggiungi un po' di stile alle popup
 const style = document.createElement('style');
