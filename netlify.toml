@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/minimal"
+  to = "/minimal/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/bold"
+  to = "/bold/index.html"
+  status = 200

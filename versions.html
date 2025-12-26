@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB Pulizie - Scegli Versione</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 20px;
+            margin-bottom: 64px;
+        }
+
+        .versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .version-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .version-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .version-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+
+        .version-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .version-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .version-features {
+            list-style: none;
+            text-align: left;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .version-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .version-features li:last-child {
+            border-bottom: none;
+        }
+
+        .version-features li::before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .current {
+            background: #10b981;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .versions {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AB Pulizie Treviso</h1>
+        <p class="subtitle">Scegli la versione del sito da visualizzare</p>
+
+        <div class="versions">
+            <!-- Versione Attuale -->
+            <a href="/index.html" class="version-card">
+                <div class="version-icon">🏠</div>
+                <h2 class="version-name">Versione Attuale</h2>
+                <p class="version-desc">Il sito principale con tutte le funzionalità complete</p>
+                <ul class="version-features">
+                    <li>Design professionale blu</li>
+                    <li>Mappa interattiva</li>
+                    <li>Form preventivo</li>
+                    <li>Recensioni Google</li>
+                    <li>Schema SEO completo</li>
+                </ul>
+                <span class="btn current">Versione Live</span>
+            </a>
+
+            <!-- Versione Minimal -->
+            <a href="/minimal/index.html" class="version-card">
+                <div class="version-icon">⚪</div>
+                <h2 class="version-name">Minimal</h2>
+                <p class="version-desc">Design pulito, elegante e minimalista</p>
+                <ul class="version-features">
+                    <li>Bianco e nero</li>
+                    <li>Spazi ampi</li>
+                    <li>Typography-focused</li>
+                    <li>Zero animazioni</li>
+                    <li>Velocità massima</li>
+                </ul>
+                <span class="btn">Visualizza</span>
+            </a>
+
+            <!-- Versione Bold -->
+            <a href="/bold/index.html" class="version-card">
+                <div class="version-icon">⚡</div>
+                <h2 class="version-name">Bold</h2>
+                <p class="version-desc">Interattivo, colorato e coinvolgente</p>
+                <ul class="version-features">
+                    <li>Colori vivaci</li>
+                    <li>Animazioni fluide</li>
+                    <li>Cursor personalizzato</li>
+                    <li>Effetti hover 3D</li>
+                    <li>Massimo impatto visivo</li>
+                </ul>
+                <span class="btn">Visualizza</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
